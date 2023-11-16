@@ -49,7 +49,7 @@ function Home() {
                         it.
                     </p>
 
-                    <p className="mt-14 md:text-[15px] text-sm  text-center inline-block">
+                    <p className="mt-4 md:text-[15px] text-sm  text-center inline-block">
                         <span>{`The Future is bright. The Future is `}</span>
                         <span className="font-medium">OrbiGenAI Innovations Lab.</span>
                     </p>
