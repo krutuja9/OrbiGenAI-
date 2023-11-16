@@ -1,50 +1,47 @@
 import  { useState } from 'react';
-
-
-
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import EmailSubscribe from './EmailSubscribe';
 
 function Home() {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
     return (
         <>
-            <div className="top-0 relative bg-gradient w-full h-[1117px] overflow-hidden">
-                <div className="fixed drop-shadow-lg  top-24 flex  items-center justify-around w-full font-inter  ">
+            <div className="relative bg-gradient w-full h-[100dvh]">
+                <header className="drop-shadow-lg flex  items-center justify-between px-4 py-3 w-full font-inter  ">
                     <p className=" sm:  text-customBlue md:text-base font-bold m-0 text-center">
                         <span className="font-medium">OrbiGenAI <p className="text-base ">Innovations Lab.</p></span>
                     </p>
 
-                    <ul className="hidden md:flex space-x-4 text-white text-2xl font-semibold">
+                    <ul className="hidden lg:flex space-x-4 text-white text-2xl font-semibold">
                         <li className='hover:border-b border-blue-500'>Home</li>
                         <li className='hover:border-b border-blue-500'>What We Do</li>
                         <li className='hover:border-b border-blue-500'>Our Strengths</li>
                         <li className='hover:border-b border-blue-500'>Our Products</li>
                         <li className='hover:border-b border-blue-500'>Contact Us</li>
                     </ul>
-                    <div className='hidden md:flex pr-4 text-white text-[20px] font-semibold'>
+                    <div className='hidden lg:flex pr-4 text-white text-[20px] font-semibold'>
                         <button className='border-none bg-transparent  mr-4'>
                             Login
                         </button>
                         <button className='border-none rounded-[20px] py-2 px-4 bg-blue-500 bg-opacity-88'>SignUp</button>
                     </div>
-                    <div className='md:hidden mr-[-110px]' onClick={handleClick}>
+                    <div className='lg:hidden cursor-pointer' onClick={handleClick}>
                         {!nav ? <MenuIcon className='w-5' /> : <XIcon className='w-5' />}
                     </div>
-                </div>
+                </header>
                 
 
-                <div className=" flex flex-col justify-center items-center text-white h-[428px] flex-shrink-0">
+                <div className=" flex flex-col justify-center items-center text-white h-4/5 flex-shrink-0">
 
-                    <h3 className=" m-0 absolute top-[267px] text-white font-light font-julius-sans-one text-lg ">
+                    <h3 className=" m-0 text-white font-light font-julius-sans-one text-lg ">
                         YOUR FUTURE POWERED BY OUR AI
                     </h3>
-                    <div className="absolute top-[298px] text-7xl leading-normal text-white text-opacity-97  font-inter  font-bold ">
+                    <div className="pb-3 text-4xl md:text-5xl lg:text-7xl leading-normal text-white text-opacity-97  font-inter  font-bold ">
                         <p className="text-center">Transforming </p>
                         <p className=' leading-none'>Research with AI</p>
                     </div>
-                    <p className="mt-1  absolute top-[499px] text-white text-center font-inter 
-                    w-[555px] h-[109px] flex-shrink-0 text-sm font-normal leading-normal">
+                    <p className="mt-1 px-4 text-white text-center font-inter w-auto sm:w-[555px] flex-shrink-0 text-xs md:text-sm font-normal leading-normal">
                         Our team of brilliant minds is hard at work, crafting the website. Stay
                         tuned as we embark on this epic journey. Brace yourself for a wave of
                         innovation that will transform the way we live, work, and interact with
@@ -52,15 +49,15 @@ function Home() {
                         it.
                     </p>
 
-                    <p className="mt-14 text-[15px]  absolute top-[554px]  text-center inline-block w-[1044px] h-6">
+                    <p className="mt-14 md:text-[15px] text-sm  text-center inline-block">
                         <span>{`The Future is bright. The Future is `}</span>
                         <span className="font-medium">OrbiGenAI Innovations Lab.</span>
                     </p>
 
-                    <h3 className="m-18 leading-normal absolute top-[653px] text-[33px] font-normal font-serif">
+                    <h3 className="my-4 px-1 leading-normal text-center md:text-[33px] text-2xl font-normal font-serif">
                         Subscribe to our Newsletter!
                     </h3>
-
+                    <EmailSubscribe />
 
                 </div>
             </div>
